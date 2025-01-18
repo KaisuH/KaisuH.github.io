@@ -1,0 +1,12 @@
+---
+title: ""
+author: ""
+date: ""
+output:
+  html_document:
+    theme: slate
+    highlight: tango   # Code highlighting style
+    toc: false         # Table of contents disabled for a simple front page
+    toc_float: false
+---
+
