@@ -68,20 +68,22 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ```{=html}
-<div class="container" style="margin-top: 20px;">
-  <!-- Section for About -->
-  <div id="about" class="row">
-    <div class="col-md-12">
-      <img src="kuva.jpg" alt="My Picture" class="circle-wrap"/>
-      
-      <!-- Your main text can be written in Markdown as well -->
-      <h1>Kaisu Hiltunen</h1>
-      <h3>Msc Bioinformatics and Digital Health</h3>
-      <p>
-        I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. 
-        Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.
-      </p>
-    </div>
+<!-- Container for header text and image -->
+<div class="header-container">
+  <!-- Image DIV -->
+  <div class="header-image">
+    <img src="kuva.jpg" alt="My Picture" class="circle-wrap">
+  </div>
+
+  <!-- Header Text DIV -->
+  <div class="header-text">
+    <h1>Kaisu Hiltunen</h1>
+    <h3>Msc Bioinformatics and Digital Health</h3>
+    <p>
+      I am a statistician/programmer interested in modern analytics,
+      medical research, and molecular biology. Feel free to connect with me on
+      <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.
+    </p>
   </div>
 
   <!-- Section for Projects -->
