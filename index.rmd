@@ -52,6 +52,44 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     margin-left: 20px; /* Provide space between the image and the text */
     margin-bottom: 20px;
   }
+  /* Default (Desktop) styling */
+/* Reserve space for the image by adding a right margin to header text */
+.header-container h1,
+.header-container h4 {
+  white-space: nowrap;           /* Prevent breaking in one line */
+  margin-right: 240px;           /* Reserve space for the 200px image + extra margin */
+}
+
+/* Your image stays floated to the right with circular cropping */
+.circle-wrap {
+  float: right; 
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  -webkit-shape-outside: circle(50%);
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* When the available width is below 520px, clear the float so the text moves below the image */
+@media (max-width: 520px) {
+  .header-container h1,
+  .header-container h4 {
+    white-space: normal;  /* Allow wrapping if needed on narrow screens */
+    margin-right: 0;      /* Remove the reserved margin */
+  }
+  .circle-wrap {
+    float: none;          /* Remove float so the image becomes a block element */
+    display: block;
+    margin: 0 auto 20px;   /* Center the image horizontally and add bottom margin */
+  }
+  /* Optionally, clear the header text so it doesn’t sit next to the image */
+  .header-container .header-text {
+    clear: both;
+  }
+}
+
 </style>
 
 <style>
@@ -65,6 +103,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     color: #BA3FBA;  /* A darker shade for when hovering */
   }
 </style>
+
+
 ```
 
 ```{=html}
@@ -77,7 +117,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
       <!-- Your main text can be written in Markdown as well -->
       <h1>Kaisu Hiltunen</h1>
       <img src="kuva.jpg" alt="My Picture" class="circle-wrap"/>
-      <h3>Msc Bioinformatics and Digital Health</h3>
+      <h4>Msc Bioinformatics and Digital Health</h4>
+      
       <p>
         I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. 
         Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.
