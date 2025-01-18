@@ -1,7 +1,7 @@
 ---
-title: "Welcome to my GitHub Page"
-author: "Kaisu Hiltunen"
-date: "2025-01-17"
+title: ""
+author: ""
+date: ""
 output:
   html_document:
     theme: flatly      # You can change to another Bootswatch theme
@@ -10,26 +10,56 @@ output:
     toc_float: false
 ---
 
-```{r}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ```
 
-# About Me
+```{=html}
+<style>
+  /* Define a class for the circular image with text wrapping */
+  .circle-wrap {
+    float: right; 
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; /* Make it circular */
+    shape-outside: circle(50%);
+    -webkit-shape-outside: circle(50%); /* For Webkit browsers */
+    margin-left: 20px; /* Provide space between the image and the text */
+    margin-bottom: 20px;
+  }
+</style>
+```
+<div>
 
-::: {style="margin-bottom: 1em;"}
-I am a bioinformatician/statistician/programmer interested in modern analytics, reproducible research, and digging deep into data. Feel free to connect with me on: [LinkedIn](https://www.linkedin.com/in/kaisu-hiltunen/)
-:::
+<img src="kuva.jpg" alt="My Picture" class="circle-wrap"/>
+
+<p>
+# Kaisu Hiltunen
+
+### Msc Bioinformatics and Digital Health
+
+I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.
+ 
+
+# Projects
+
+ 
+# Kaisu Hiltunen
+
+### Msc Bioinformatics and Digital Health
+
+I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a></p>
 
 # Projects
 
 ::: {style="margin-bottom: 1em;"}
-My dearest passions are bioinformatics, AI, and molecular biology. Below are some of the projects I maintain on GitHub. Click the headers to learn more:
+My passions are bioinformatics, AI, and (epi)genetics. Below are some of the projects I maintain on GitHub. Click the headers to learn more:
 
 ## [Emotion AI](https://kaisuh.github.io/Emotion-AI/)
 
 -   Description: Building a CNN to identify emotions from images
--   GitHub link: https://github.com/KaisuH/Emotion-AI
-
-## [Age epigenetics]()
+-   GitHub link: <https://github.com/KaisuH/Emotion-AI>
 :::
+</p>
+</div>
