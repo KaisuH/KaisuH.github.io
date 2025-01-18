@@ -1,13 +1,35 @@
 ---
-title: "index"
+title: "Welcome to my GitHub Page"
 author: "Kaisu Hiltunen"
 date: "2025-01-17"
-output: html_document
+output:
+  html_document:
+    theme: flatly      # You can change to another Bootswatch theme
+    highlight: tango   # Code highlighting style
+    toc: false         # Table of contents disabled for a simple front page
+    toc_float: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
 ```
 
-## R Markdown
+# About Me
 
+::: {style="margin-bottom: 1em;"}
+I am a bioinformatician/statistician/programmer interested in modern analytics, reproducible research, and digging deep into data. Feel free to connect with me on: [LinkedIn](https://www.linkedin.com/in/kaisu-hiltunen/)
+:::
+
+# Projects
+
+::: {style="margin-bottom: 1em;"}
+My dearest passions are bioinformatics, AI, and molecular biology. Below are some of the projects I maintain on GitHub. Click the headers to learn more:
+
+## [Emotion AI](https://kaisuh.github.io/Emotion-AI/)
+
+-   Description: Building a CNN to identify emotions from images
+-   GitHub link: https://github.com/KaisuH/Emotion-AI
+
+## [Age epigenetics]()
+:::
