@@ -12,6 +12,11 @@ output:
 ---
 
 ```{=html}
+
+<head>
+  <title>Kaisu Hiltunen</title>
+</head>
+
 <!-- Navigation Menu using Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
@@ -21,6 +26,9 @@ output:
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <!-- Adjust the href attributes to jump to your sections (requires ID attributes in your content) -->
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#projects">Projects</a>
       </li>
@@ -50,7 +58,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     shape-outside: circle(50%);
     -webkit-shape-outside: circle(50%); /* For Webkit browsers */
     margin-left: 20px; /* Provide space between the image and the text */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   /* Default (Desktop) styling */
 /* Reserve space for the image by adding a right margin to header text */
@@ -60,7 +68,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   margin-right: 240px;           /* Reserve space for the 200px image + extra margin */
 }
 
-/* Your image stays floated to the right with circular cropping */
+/* The image stays floated to the right with circular cropping */
 .circle-wrap {
   float: right; 
   width: 200px; 
@@ -69,7 +77,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   shape-outside: circle(50%);
   -webkit-shape-outside: circle(50%);
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 /* When the available width is below 520px, clear the float so the text moves below the image */
@@ -79,6 +87,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     white-space: normal;  /* Allow wrapping if needed on narrow screens */
     margin-right: 0;      /* Remove the reserved margin */
   }
+ 
   .circle-wrap {
     float: none;          /* Remove float so the image becomes a block element */
     display: block;
@@ -102,50 +111,122 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   a:hover {
     color: #BA3FBA;  /* A darker shade for when hovering */
   }
+
+ #about {
+  overflow: hidden; /* Ensures the floating image does not push down content */
+}
+
+
+/*Gradient animation
+*/
+
+body {
+  background: linear-gradient(300deg, #3a3f44, #272b30, #1b1f24);
+  /* color: white; Ensure text is readable */
+}
+
+/* Floating node effect */
+@keyframes floatNodes {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0px); }
+}
+
+.node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: floatNodes 5s infinite ease-in-out;
+}
+
+/* Example positions */
+.node:nth-child(1) { top: 10%; left: 20%; animation-duration: 6s; }
+.node:nth-child(2) { top: 50%; left: 60%; animation-duration: 4s; }
+.node:nth-child(3) { top: 80%; left: 30%; animation-duration: 7s; }
+
+
+/*DNa bouncing animation*/
+
+@keyframes moveDNA {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(0px); }
+}
+
+.dna-animation {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  width: 150px;
+  height: auto;
+  opacity: 0.3;
+  animation: moveDNA 6s infinite ease-in-out;
+}
 </style>
-
-
 ```
 
 ```{=html}
-<div class="container" style="margin-top: 20px;">
+<div class="container" style="margin-top: 40px;">
   <!-- Section for About -->
   <div id="about" class="row">
     <div class="col-md-12">
-      
-      
-      <!-- Your main text can be written in Markdown as well -->
+      <!-- Main text-->
       <h1>Kaisu Hiltunen</h1>
       <img src="kuva.jpg" alt="My Picture" class="circle-wrap"/>
-      <h4>Msc Bioinformatics and Digital Health</h4>
       
-      <p>
-        I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. 
-        Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.
+      <p><h4>Msc Bioinformatics and Digital Health</h4>
+        <p>I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. 
+        I am fascinated by how genetics, artificial intelligence, and bioinformatics help us uncover the mechanisms that shape who we are and how we function. These fields offer a deeper look into the complexities of biology - peering into the molecular engine of life.  </p>
+        
+      <p> What excites me most is their potential to solve real-world problems and improve lives. From advancing personalized medicine to accelerating drug discovery, these technologies hold the key to tackling some of the biggest challenges in healthcare and beyond. I am particularly motivated by the idea that by decoding biological data and leveraging AI, we can make discoveries that alleviate suffering and drive meaningful progress in science and medicine. </p>
       </p>
     </div>
-  </div>
+ </div> 
+
+
+ 
 
   <!-- Section for Projects -->
-  <div id="projects" class="row" style="margin-top: 40px;">
-    <div class="col-md-12">
+  <div id="projects" class="row" style="margin-top: 30px;">
+    <div class="col-md-12"> 
       <h2>Projects</h2>
-      <p>
-        My passions are bioinformatics, AI, and (epi)genetics. Below are some of the projects I maintain on GitHub. 
+        Below are some of the projects I maintain on GitHub. 
         Click the headers to learn more:
       </p>
-      <h3><a href="https://kaisuh.github.io/Emotion-AI/">Emotion AI</a></h3>
+      <h4><a href="https://kaisuh.github.io/Emotion-AI/">Emotion AI</a></h4>
       <ul>
         <li>Description: Building a CNN to identify emotions from images</li>
         <li>GitHub link: <a href="https://github.com/KaisuH/Emotion-AI">https://github.com/KaisuH/Emotion-AI</a></li>
       </ul>
     </div>
   </div>
+  
+<!-- Section for Education -->
+  <div id="education" class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+      <h2>Education</h2>
+      
+      <h5 class="subtitle">Master of Science in Life Science Technologies,  Major in Bioinformation Technology and Digital Health</h5> 
+      <p><em>Aalto University, School of Science</em></p>
+      
+      <p>  My master’s program combined advanced studies in biology, data science, and digital health technologies. I gained expertise in analyzing complex biological data, developing computational models, and applying digital solutions to improve healthcare outcomes. This interdisciplinary training provided me with the tools to bridge the gap between technology and life sciences. 
+      </p>
+      
+      <h5 class="subtitle">Bachelor of Science in Bioinformation Technology</h5>
+      <p><em>Aalto University, School of Electrical Engineering</em></p>
 
-  <!-- Optionally, add more sections like Contact, etc. -->
+      <p>During my bachelor’s studies, I developed a strong foundation in computer science, engineering, and biology. The curriculum emphasized the integration of information technology with biological research, equipping me with essential skills in data analysis, programming, and problem-solving in the context of life sciences.</p>
+    </div>
+  </div>
+
+
+  <!-- Section for Contact-->
   <div id="contact" class="row" style="margin-top: 40px;">
     <div class="col-md-12">
       <h2>Contact</h2>
+      <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.</p>
       <p>Email: <a href="mailto:kaisuhh@gmail.com">kaisuhh@gmail.com</a></p>
     </div>
   </div>
