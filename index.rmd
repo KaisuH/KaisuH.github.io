@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Kaisu Hiltunen | Home"
 author: ""
 date: ""
 output:
@@ -16,6 +16,12 @@ output:
 <head>
   <title>Kaisu Hiltunen</title>
 </head>
+
+<style>
+  h1.title, .author, .date { 
+    display: none; 
+  }
+</style>
 
 <!-- Navigation Menu using Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
