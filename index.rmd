@@ -27,13 +27,13 @@ output:
     <ul class="navbar-nav ml-auto">
       <!-- Adjust the href attributes to jump to your sections (requires ID attributes in your content) -->
       <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="education.html">Education</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="projects.html">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
   </div>
@@ -117,53 +117,15 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 }
 
 
-/*Gradient animation
-*/
+/*Gradient */
 
 body {
   background: linear-gradient(300deg, #3a3f44, #272b30, #1b1f24);
+  background-size: cover;
+  background-attachment: fixed;
   /* color: white; Ensure text is readable */
 }
 
-/* Floating node effect */
-@keyframes floatNodes {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(20px); }
-  100% { transform: translateY(0px); }
-}
-
-.node {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  animation: floatNodes 5s infinite ease-in-out;
-}
-
-/* Example positions */
-.node:nth-child(1) { top: 10%; left: 20%; animation-duration: 6s; }
-.node:nth-child(2) { top: 50%; left: 60%; animation-duration: 4s; }
-.node:nth-child(3) { top: 80%; left: 30%; animation-duration: 7s; }
-
-
-/*DNa bouncing animation*/
-
-@keyframes moveDNA {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(30px); }
-  100% { transform: translateY(0px); }
-}
-
-.dna-animation {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  width: 150px;
-  height: auto;
-  opacity: 0.3;
-  animation: moveDNA 6s infinite ease-in-out;
-}
 </style>
 ```
 
@@ -178,56 +140,19 @@ body {
       
       <p><h4>Msc Bioinformatics and Digital Health</h4>
         <p>I am a statistician/programmer interested in modern analytics, medical research, and molecular biology. 
-        I am fascinated by how genetics, artificial intelligence, and bioinformatics help us uncover the mechanisms that shape who we are and how we function. These fields offer a deeper look into the complexities of biology - peering into the molecular engine of life.  </p>
+        I am fascinated by how genetics, artificial intelligence, and bioinformatics help us uncover the mechanisms that shape who we are and how we function. </p>
         
-      <p> What excites me most is their potential to solve real-world problems and improve lives. From advancing personalized medicine to accelerating drug discovery, these technologies hold the key to tackling some of the biggest challenges in healthcare and beyond. I am particularly motivated by the idea that by decoding biological data and leveraging AI, we can make discoveries that alleviate suffering and drive meaningful progress in science and medicine. </p>
+      <p> What excites me most is their potential to take on real-world problems and improve lives. From advancing personalized medicine to accelerating drug discovery, these technologies hold the key to solving some of the biggest challenges in healthcare and beyond. I am motivated by the idea that by decoding biological data and leveraging AI, we can make discoveries that alleviate suffering and drive meaningful progress in science and medicine. </p>
       </p>
     </div>
  </div> 
 
-
- 
-
-  <!-- Section for Projects -->
-  <div id="projects" class="row" style="margin-top: 30px;">
-    <div class="col-md-12"> 
-      <h2>Projects</h2>
-        Below are some of the projects I maintain on GitHub. 
-        Click the headers to learn more:
-      </p>
-      <h4><a href="https://kaisuh.github.io/Emotion-AI/">Emotion AI</a></h4>
-      <ul>
-        <li>Description: Building a CNN to identify emotions from images</li>
-        <li>GitHub link: <a href="https://github.com/KaisuH/Emotion-AI">https://github.com/KaisuH/Emotion-AI</a></li>
-      </ul>
-    </div>
-  </div>
-  
-<!-- Section for Education -->
-  <div id="education" class="row" style="margin-top: 30px;">
-    <div class="col-md-12">
-      <h2>Education</h2>
-      
-      <h5 class="subtitle">Master of Science in Life Science Technologies,  Major in Bioinformation Technology and Digital Health</h5> 
-      <p><em>Aalto University, School of Science</em></p>
-      
-      <p>  My master’s program combined advanced studies in biology, data science, and digital health technologies. I gained expertise in analyzing complex biological data, developing computational models, and applying digital solutions to improve healthcare outcomes. This interdisciplinary training provided me with the tools to bridge the gap between technology and life sciences. 
-      </p>
-      
-      <h5 class="subtitle">Bachelor of Science in Bioinformation Technology</h5>
-      <p><em>Aalto University, School of Electrical Engineering</em></p>
-
-      <p>During my bachelor’s studies, I developed a strong foundation in computer science, engineering, and biology. The curriculum emphasized the integration of information technology with biological research, equipping me with essential skills in data analysis, programming, and problem-solving in the context of life sciences.</p>
-    </div>
-  </div>
-
-
   <!-- Section for Contact-->
   <div id="contact" class="row" style="margin-top: 40px;">
     <div class="col-md-12">
-      <h2>Contact</h2>
+      <h4>Connect</h4>
       <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/kaisu-hiltunen/">LinkedIn</a>.</p>
-      <p>Email: <a href="mailto:kaisuhh@gmail.com">kaisuhh@gmail.com</a></p>
+      <p>Email: firstname + hh [at] gmail [dot] com (as in for example namehh@gmail.com) </p>
     </div>
   </div>
 </div>
