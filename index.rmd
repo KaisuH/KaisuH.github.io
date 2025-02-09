@@ -21,6 +21,20 @@ output:
   h1.title, .author, .date { 
     display: none; 
   }
+  
+   /* Change link color globally */
+  a {
+    color: #C99A81;  /* Change this to your preferred link color */
+  }
+  
+  /* Optionally, change link hover color */
+  a:hover {
+    color: #BA3FBA;  /* A darker shade for when hovering */
+  }
+
+ #about {
+  overflow: hidden; /* Ensures the floating image does not push down content */
+}
 </style>
 
 <!-- Navigation Menu using Bootstrap Navbar -->
@@ -111,19 +125,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 </style>
 
 <style>
-  /* Change link color globally */
-  a {
-    color: #C99A81;  /* Change this to your preferred link color */
-  }
-  
-  /* Optionally, change link hover color */
-  a:hover {
-    color: #BA3FBA;  /* A darker shade for when hovering */
-  }
-
- #about {
-  overflow: hidden; /* Ensures the floating image does not push down content */
-}
+ 
 
 
 /*Gradient */

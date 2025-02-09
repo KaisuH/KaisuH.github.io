@@ -69,6 +69,44 @@ ul.task-list{list-style: none;}
 
 <style>
 h1.title, .author, .date { display: none; }
+
+a {
+color: #C99A81; 
+}
+
+a:hover {
+color: #BA3FBA; 
+}
+#about {
+overflow: hidden; 
+}
+
+#result a {
+color: #C99A81; text-decoration: none;
+}
+#result a:hover {
+color: #BA3FBA;
+text-decoration: underline;
+}
+.progress {
+width: 100%;
+height: 20px;
+background-color: #3a3f44; 
+border-radius: 5px;
+margin: 20px auto 10px;
+overflow: hidden;
+}
+.progress-bar {
+height: 100%;
+width: 0%; 
+background-color: #62c462; 
+color: white;
+text-align: center;
+line-height: 20px;
+font-size: 14px;
+border-radius: 5px;
+transition: width 0.4s ease-in-out; 
+}
 </style>
 
 <!-- Navigation Menu using Bootstrap Navbar -->
@@ -183,6 +221,11 @@ margin-top: 10px;
         <button class="btn btn-primary" onclick="nextQuestion()">Next Question</button>
         
         <p id="score" class="result" style="display: none;"></p>
+        
+        <div class="progress">
+          <div id="progress-bar" class="progress-bar" style="width: 0%;">0%</div>
+        </div>
+        
     </div>
 
     <script>
@@ -199,11 +242,48 @@ margin-top: 10px;
             { question: "Bioinformatics combines biology, data science, and computing.", answer: true,
             explanation: "Bioinformatics is an interdisciplinary field of science that develops methods and software tools for understanding biological data, especially when the data sets are large and complex."},
             { question: "The first programmable computer was invented in the 1970s.", answer: false,
-            explanation: "The world's first programmable and automatic digital computer was invented by Konrad Zuse in 1938."}
+            explanation: "The world's first programmable and automatic digital computer was invented by Konrad Zuse in 1938. The <a href=\"https://horst-zuse.hier-im-netz.de/Konrad_Zuse_index_english_html/rechner_z3.htmlZ3\" target=\"_blank\">Z3</a> weighed 1000 kg and used punched celluloid tapes for program memory."},
+            
+            { question: "Axolotls can regrow entire limbs, parts of their heart, and even parts of their brain.", answer: true,
+            explanation: `Axolotls are the coolest animals that exist (fact). They have an extraordinary ability to regenerate not just limbs, but also spinal cord tissue and parts of their brain!
+        
+        <br><br>
+
+        <img src="images/axolotl.jpg" width="500" height="300" alt="Axolotl (Ambystoma mexicanum) - Leucistic">
+        
+        <br><br>
+
+        Image Credit: <a href="https://www.flickr.com/photos/23095866@N03/6978007064" target="_blank">John P Clare (Flickr)</a>, used under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">CC BY-NC-ND 2.0</a>.`
+    
+            },
+            
+            { question: "Axolotls stay in their larval stage their entire lives and don't normally undergo metamorphosis.", answer: true,
+            explanation: "Unlike most amphibians, axolotls remain in their aquatic juvenile form for life unless exposed to certain <a href=\"https://www.nature.com/articles/104435b0\" target=\"_blank\" >hormones</a>. If they do undergo the unlikely and unfortunate event of metamorphosis they will have to undertake a completely different lifestyle as a terrestrial salamander."},
+            
+            { question: "Tardigrades can survive in space vacuum and stand the unfiltered solar radiation in space.", answer: true,
+            explanation: `In 2007, tardigrades were sent into space on the <a href=\"https://www.cell.com/current-biology/fulltext/S0960-9822(08)00805-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008051%3Fshowall%3Dtrue\" target=\"_blank\" >FOTON M3 mission</a> and survived direct exposure to space vacuum and cosmic radiation! 
+            
+        <br><br>
+
+        <img src="images/tardigrade.jpg" height="300" alt="water bear">
+        
+        <br><br>
+
+        Scanning electron micrograph of an adult water bear (tardigrade), Hypsibius exemplaris. Image Credit: Bob Goldstein & Vicky Madden, UNC Chapel Hill <a href="https://flic.kr/p/5kZxbg" target="_blank"> (Flickr)</a>, used under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">CC BY-NC-ND 2.0</a>.`
+        }
+            
         ];
 
         let currentQuestion = 0;
         let score = 0;
+
+        function updateProgressBar() {
+            let progress = ((currentQuestion) / questions.length) * 100;
+            let progressBar = document.getElementById("progress-bar");
+        
+            progressBar.style.width = `${progress}%`;
+            progressBar.innerText = `${currentQuestion}/${questions.length}`;
+        }
 
         function loadQuestion() {
             if (currentQuestion < questions.length) {
@@ -216,6 +296,8 @@ margin-top: 10px;
                 document.querySelector(".btn-true").style.display = "none";
                 document.querySelector(".btn-false").style.display = "none";
                 document.querySelector(".btn-primary").style.display = "none";
+                document.getElementById("result").innerHTML = "";
+                updateProgressBar();
             }
         }
 
@@ -224,16 +306,17 @@ margin-top: 10px;
             let explanation = questions[currentQuestion].explanation;
         
             if (userAnswer === correctAnswer) {
-                document.getElementById("result").innerHTML = `✅ Correct! ${explanation}`;
+                document.getElementById("result").innerHTML = `✅ Correct! <br>${explanation}</p>`;
                 score++;
             } else {
-                document.getElementById("result").innerHTML = `❌ Incorrect. ${explanation}`;
+                document.getElementById("result").innerHTML = `❌ Incorrect. <br>${explanation}</p>`;
             }
         }
 
         function nextQuestion() {
             currentQuestion++;
             loadQuestion();
+            updateProgressBar();
         }
 
         // Load first question on page load
@@ -242,6 +325,7 @@ margin-top: 10px;
 
 </body>
 </html>
+
 
 
 
