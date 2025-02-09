@@ -39,6 +39,9 @@ output:
         <a class="nav-link" href="projects.html">Projects</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="miscellanious.html">Miscellanious</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
@@ -126,7 +129,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 /*Gradient */
 
 body {
-  background: linear-gradient(300deg, #3a3f44, #272b30, #1b1f24);
+  background: linear-gradient(360deg, #3a3f44, #272b30, #1b1f24);
   background-size: cover;
   background-attachment: fixed;
   /* color: white; Ensure text is readable */
