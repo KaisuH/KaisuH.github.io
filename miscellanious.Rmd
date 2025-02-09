@@ -165,6 +165,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
             font-size: 18px;
             margin-top: 10px;
         }
+        img {
+            max-width: 100%;  /* Ensures the image never exceeds its container width */
+            height: auto;  /* Maintains aspect ratio */
+            display: block; /* Centers image properly */
+            margin: 0 auto; /* Centers image horizontally */
+        }
     </style>
 </head>
 <body>
