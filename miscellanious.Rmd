@@ -170,6 +170,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
             height: auto;  /* Maintains aspect ratio */
             display: block; /* Centers image properly */
             margin: 0 auto; /* Centers image horizontally */
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -211,12 +213,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
             
             { question: "Axolotls can regrow entire limbs, parts of their heart, and even parts of their brain.", answer: true,
             explanation: `Axolotls are the coolest animals that exist (fact). They have an extraordinary ability to regenerate not just limbs, but also spinal cord tissue and parts of their brain!
-        
-        <br><br>
-
-        <img src="images/axolotl.jpg" width="500" height="300" alt="Axolotl (Ambystoma mexicanum) - Leucistic">
-        
-        <br><br>
+            
+        <img src="images/axolotl.jpg" alt="Axolotl (Ambystoma mexicanum) - Leucistic">
 
         Image Credit: <a href="https://www.flickr.com/photos/23095866@N03/6978007064" target="_blank">John P Clare (Flickr)</a>, used under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">CC BY-NC-ND 2.0</a>.`
     
@@ -227,12 +225,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
             
             { question: "Tardigrades can survive in space vacuum and stand the unfiltered solar radiation in space.", answer: true,
             explanation: `In 2007, tardigrades were sent into space on the <a href=\"https://www.cell.com/current-biology/fulltext/S0960-9822(08)00805-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008051%3Fshowall%3Dtrue\" target=\"_blank\" >FOTON M3 mission</a> and survived direct exposure to space vacuum and cosmic radiation! 
-            
-        <br><br>
 
-        <img src="images/tardigrade.jpg" height="300" alt="water bear">
-        
-        <br><br>
+        <img src="images/tardigrade.jpg" alt="water bear">
 
         Scanning electron micrograph of an adult water bear (tardigrade), Hypsibius exemplaris. Image Credit: Bob Goldstein & Vicky Madden, UNC Chapel Hill <a href="https://flic.kr/p/5kZxbg" target="_blank"> (Flickr)</a>, used under <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">CC BY-NC-ND 2.0</a>.`
         }
