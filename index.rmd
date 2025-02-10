@@ -125,10 +125,10 @@ body {
       
   <button class="btn-email" onclick="showEmail()">📧 Email Me</button>
     
+    <p id="copy-message">✅ Email copied to clipboard!</p>
+
     <!-- Hidden Image of Handwritten Email -->
     <img id="email-image" src="images/email.jpeg" alt="Handwritten Email" onclick="copyEmail()">
-
-    <p id="copy-message">✅ Email copied to clipboard!</p>
 
     <script>
         function showEmail() {
