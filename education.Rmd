@@ -22,41 +22,13 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<style>
-  h1.title, .author, .date { 
-    display: none; 
-  }
-</style>
-
-<!-- Navigation Menu using Bootstrap Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <!-- Adjust the href attributes to jump to your sections (requires ID attributes in your content) -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="education.html">Education</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="projects.html">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="miscellanious.html">Miscellanious</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
 ```
+
+```{r, echo=FALSE, results="asis"}
+#  Importing the Navigation bar and some styling
+htmltools::includeHTML("css/navbar.html")
+```
+
 ```{=html}
 <!DOCTYPE html>
 <html lang="en">

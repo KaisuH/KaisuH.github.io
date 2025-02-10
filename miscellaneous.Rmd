@@ -23,24 +23,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 </head>
 
 <style>
-  h1.title, .author, .date { 
-    display: none; 
-  }
-   /* Change link color globally */
-  a {
-    color: #C99A81;  /* Change this to your preferred link color */
-  }
-  
-  /* Optionally, change link hover color */
-  a:hover {
-    color: #BA3FBA;  /* A darker shade for when hovering */
-  }
 
  #about {
   overflow: hidden; /* Ensures the floating image does not push down content */
 }
 
-/* Apply same styling to dynamically inserted answers */
+/* Apply same link styling to dynamically inserted answers */
   #result a {
     color: #C99A81; 
     text-decoration: none;
@@ -75,44 +63,13 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
   
 </style>
 
-<!-- Navigation Menu using Bootstrap Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <!-- Adjust the href attributes to jump to your sections (requires ID attributes in your content) -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="education.html">Education</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="projects.html">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="miscellanious.html">Miscellanious</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
 ```
-```{=html}
-<body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
 
+```{r, echo=FALSE, results="asis"}
+#  Importing the Navigation bar and some styling
+htmltools::includeHTML("css/navbar.html")
 ```
+
 
 ```{=html}
 <!DOCTYPE html>
@@ -197,19 +154,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
     <script>
         const questions = [
-            { question: "The human genome contains around 3 billion base pairs.", answer: true, 
+            { question: "The human genome contains around 6 billion base pairs.", answer: false, 
             explanation: "The human genome has approximately 3 billion DNA base pairs, which are distributed across 23 chromosomes."},
-            
-            { question: "AI can completely replace doctors today.", answer: false,
-            explanation: "AI can assist doctors but for now it lacks human intuition and ethical reasoning."},
-            
-            { question: "DNA stands for Digital Numeric Algorithm.", answer: false,
-            explanation: "DNA stands for Deoxyribonucleic acid. It is the molecule that carries genetic information for the development and functioning of an organism."},
-            
-            { question: "Bioinformatics combines biology, data science, and computing.", answer: true,
-            explanation: "Bioinformatics is an interdisciplinary field of science that develops methods and software tools for understanding biological data, especially when the data sets are large and complex."},
-            { question: "The first programmable computer was invented in the 1970s.", answer: false,
-            explanation: "The world's first programmable and automatic digital computer was invented by Konrad Zuse in 1938. The <a href=\"https://horst-zuse.hier-im-netz.de/Konrad_Zuse_index_english_html/rechner_z3.htmlZ3\" target=\"_blank\">Z3</a> weighed 1000 kg and used punched celluloid tapes for program memory."},
             
             { question: "Axolotls can regrow entire limbs, parts of their heart, and even parts of their brain.", answer: true,
             explanation: `Axolotls are the coolest animals that exist (fact). They have an extraordinary ability to regenerate not just limbs, but also spinal cord tissue and parts of their brain!
@@ -220,10 +166,21 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     
             },
             
-            { question: "Axolotls stay in their larval stage their entire lives and don't normally undergo metamorphosis.", answer: true,
+            { question: "Axolotls stay in a larval-like stage their entire lives and don't normally undergo metamorphosis.", answer: true,
             explanation: "Unlike most amphibians, axolotls remain in their aquatic juvenile form for life unless exposed to certain <a href=\"https://www.nature.com/articles/104435b0\" target=\"_blank\" >hormones</a>. If they do undergo the unlikely and unfortunate event of metamorphosis they will have to undertake a completely different lifestyle as a terrestrial salamander."},
+            { question: "AI can completely replace doctors today.", answer: false,
+            explanation: "AI can assist doctors but for now it lacks human intuition and ethical reasoning."},
             
-            { question: "Tardigrades can survive in space vacuum and stand the unfiltered solar radiation in space.", answer: true,
+            { question: "Gene therapy has been utilised to regenerate the entire human epidermis.", answer: true,
+            explanation: "In 2015, transgenic keratinocyte cultures were used to regenerate an <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6283270/\" target=\"_blank\">entire functional epidermis</a> of a boy suffering from Junctional epidermolysis bullosa (JEB). JEB is a severe genetic disease caused by mutations in laminin-332 genes and it leads to epidermal loss and skin and mucosa wounds. Previously there was no cure for the disease and more than 40 % of patients died before adolescence."},
+            
+            { question: "Bioinformatics combines biology, data science, and computing.", answer: true,
+            explanation: "Bioinformatics is an interdisciplinary field of science that develops methods and software tools for understanding biological data, especially when the data sets are large and complex."},
+            { question: "The first programmable electronic computer was invented in the 1970s.", answer: false,
+            explanation: "The world's first programmable and automatic digital computer was invented by Konrad Zuse in 1938. The <a href=\"https://horst-zuse.hier-im-netz.de/Konrad_Zuse_index_english_html/rechner_z3.htmlZ3\" target=\"_blank\">Z3</a> weighed 1000 kg and used punched celluloid tapes for program memory."},
+            
+            
+            { question: "Tardigrades can not survive in space vacuum or stand the unfiltered solar radiation in space.", answer: false,
             explanation: `In 2007, tardigrades were sent into space on the <a href=\"https://www.cell.com/current-biology/fulltext/S0960-9822(08)00805-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008051%3Fshowall%3Dtrue\" target=\"_blank\" >FOTON M3 mission</a> and survived direct exposure to space vacuum and cosmic radiation! 
 
         <img src="images/tardigrade.jpg" alt="water bear">
