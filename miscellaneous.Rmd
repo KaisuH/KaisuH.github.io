@@ -180,8 +180,8 @@ htmltools::includeHTML("css/navbar.html")
             explanation: "The world's first programmable and automatic digital computer was invented by Konrad Zuse in 1938. The <a href=\"https://horst-zuse.hier-im-netz.de/Konrad_Zuse_index_english_html/rechner_z3.htmlZ3\" target=\"_blank\">Z3</a> weighed 1000 kg and used punched celluloid tapes for program memory."},
             
             
-            { question: "Tardigrades can not survive in space vacuum or stand the unfiltered solar radiation in space.", answer: false,
-            explanation: `In 2007, tardigrades were sent into space on the <a href=\"https://www.cell.com/current-biology/fulltext/S0960-9822(08)00805-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008051%3Fshowall%3Dtrue\" target=\"_blank\" >FOTON M3 mission</a> and survived direct exposure to space vacuum and cosmic radiation! 
+            { question: "No animal can survive in a space vacuum or stand the unfiltered solar radiation in space.", answer: false,
+            explanation: `In 2007, tardigrades were sent into space on the <a href=\"https://www.cell.com/current-biology/fulltext/S0960-9822(08)00805-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008051%3Fshowall%3Dtrue\" target=\"_blank\" >FOTON M3 mission</a> and survived direct exposure to space vacuum and cosmic radiation! Their space exploration around the Earths low orbit lasted for 10 days.
 
         <img src="images/tardigrade.jpg" alt="water bear">
 
