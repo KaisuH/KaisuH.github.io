@@ -168,8 +168,9 @@ htmltools::includeHTML("css/navbar.html")
             
             { question: "Axolotls stay in a larval-like stage their entire lives and don't normally undergo metamorphosis.", answer: true,
             explanation: "Unlike most amphibians, axolotls remain in their aquatic juvenile form for life unless exposed to certain <a href=\"https://www.nature.com/articles/104435b0\" target=\"_blank\" >hormones</a>. If they do undergo the unlikely and unfortunate event of metamorphosis they will have to undertake a completely different lifestyle as a terrestrial salamander."},
-            { question: "AI can completely replace doctors today.", answer: false,
-            explanation: "AI can assist doctors but for now it lacks human intuition and ethical reasoning."},
+            
+            { question: "AI can discover new antibiotics effective against drug-resistant bacteria.", answer: true,
+explanation: `For example, in 2019, MIT researchers trained a neural network on a data set of 2335 molecules to learn which ones inhibited the growth of <em>E. coli</em>. They then applied it to multiple chemical libraries comprising over 107 million molecules, ranked the candidates by the model's predicted score, and selected the most promising ones. This surfaced <a href="https://www.cell.com/cell/fulltext/S0092-8674(20)30102-1" target="_blank">halicin</a>, a molecule originally developed as a diabetes drug but abandoned after poor results. Halicin was named as a direct homage to HAL 9000, the fictional, hyper-intelligent AI from the 1968 sci-fi film <em>2001: A Space Odyssey</em>.`},
             
             { question: "Gene therapy has been utilised to regenerate the entire human epidermis.", answer: true,
             explanation: "In 2015, transgenic keratinocyte cultures were used to regenerate an <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6283270/\" target=\"_blank\">entire functional epidermis</a> of a boy suffering from Junctional epidermolysis bullosa (JEB). JEB is a severe genetic disease caused by mutations in laminin-332 genes and it leads to epidermal loss and skin and mucosa wounds. Previously there was no cure for the disease and more than 40 % of patients died before adolescence."},
